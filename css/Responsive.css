@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ----------------------------------------------1. Header: ------------------------------------------------*/
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    z-index: 98;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#nav-bar::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.8) url('../img/banner/furniture\ banner.png') no-repeat top left/cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-blend-mode: darken;
+    z-index: -1;
+}
+
+/* a. Left nav: */
+
+.logo {
+    margin: 1rem 3rem;
+}
+
+#nav-logo {
+    cursor: pointer;
+}
+
+/* b. Middle nav: */
+
+.nav-links {
+    display: flex;
+}
+
+.nav-items {
+    list-style: none;
+    padding: 2rem 3rem;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-items a:hover {
+    color: #00b894;
+}
+
+/* c. Right nav: */
+
+.right-nav {
+    margin: 0 3rem;
+}
+
+#nav-search {
+    margin-right: .2rem;
+    padding: .2rem 1rem;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+#nav-btn {
+    cursor: pointer;
+    padding: .1rem 1rem;
+    background: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#nav-btn:hover {
+    background-color: #00b894;
+    transition: 0.7s;
+}
+
+/* d. Hamburger: */
+
+.menu {
+    position: absolute;
+    top: 2.4rem;
+    right: 2rem;
+    display: none;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+}
+
+#hamburger {
+    width: 3vw;
+}
+
+/* ---------------------------------------- 2. Banner Area: ------------------------------------------------*/
+
+.banner-section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 0;
+    z-index: 4;
+    left: 0;
+}
+
+/* a. Slider: */
+.banner-slider {
+    display: flex;
+    flex-direction: row;
+    width: 800%;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -4;
+    /* animation: slide 24s 5s infinite backwards; */
+}
+
+@keyframes slide {
+    0% {
+        left: 0%;    
+    }
+    6% {
+        left: -0%;
+    }
+    12% {
+        left: -100%;
+    }
+    18% {
+        left: -100%;
+    }
+    24% {
+        left: -200%;
+    }
+    30% {
+        left: -200%;
+    }
+    36% {
+        left: -300%;
+    }
+    42% {
+        left: -300%;
+    }
+    48% {
+        left: -400%;
+    }
+    54% {
+        left: -400%;
+    }
+    60% {
+        left: -500%;
+    }
+    66% {
+        left: -500%;
+    }
+    72% {
+        left: -600%;
+    }
+    78% {
+        left: -600%;
+    }
+    84% {
+        left: -700%;
+    }
+    90% {
+        left: -700%;
+    }
+}
+
+.slide {
+    width: 100vw;
+}
+
+.caption {
+    height: 57vh;
+    width: 59vw;
+    position: relative;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption .banner-heading {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.caption .banner-para {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+
+button.banner-btn {
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 0.1rem 1.3rem;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner-btn:hover {
+    background-color: #c8d6e5;
+    color: black;
+    transition: 1s;
+}
+
+/* a. Furniture: */
+.slide1 {
+    background: rgba(0, 0, 0, 0.7) url('../img/banner/furniture\ banner.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+/* b. Grill: */
+.slide2 {
+    background: rgba(0, 0, 0, 0.7) url('../img/banner/grill\ banner.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+/* c. Paint: */
+.slide3 {
+    background: rgba(0, 0, 0, 0.7) url('../img/banner/paint\ banner.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+/* d. Kitchen Platform: */
+.slide4 {
+    background: rgba(0, 0, 0, 0.7) url('../img/banner/platform\ banner.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+/* e. Roof: */
+.slide5 {
+    background: rgba(0, 0, 0, 0.7) url('../img/banner/roof\ banner.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+/* f. Tiles: */
+.slide6 {
+    background: rgba(0, 0, 0, 0.7) url('../img/banner/tile\ project.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+/* g. Windows: */
+.slide7 {
+    background: rgba(0, 0, 0, 0.7) url('../img/banner/window.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+/* h. Furniture: */
+.slide1 {
+    background: rgba(0, 0, 0, 0.7) url('../img/banner/furniture\ banner.png') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+
+/* ---------------------------------------- 3. Section Area: ------------------------------------------------*/
+
+.service-section {
+    height: 168vh;
+    width: 100vw;
+}
+
+.service-heading {
+    font-size: 3.4rem;
+    text-align: center;
+    padding: 4rem 0rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 82%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.service-items {
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 2rem 2rem;
+    height: 35vh;
+    width: 23vw;
+    background-color: white;
+}
+
+.service-items:hover {
+    transform: translateY(-12px);
+    transition: 1s;
+    box-shadow: 1px 1px 5px gray;
+}
+
+/* a. Furniture: */
+#service-img1 {
+    width: 21vw;
+    cursor: pointer;
+    padding: 1.4rem 1rem;
+}
+
+.service-para {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+
+/* b. Grill: */
+#service-img2 {
+    width: 8.1vw;
+    cursor: pointer;
+    padding: 1rem 7rem;
+}
+
+/* c. Paint: */
+#service-img3 {
+    width: 12vw;
+    cursor: pointer;
+    padding: 1rem 5.2rem;
+}
+
+/* d. Kitchen Platform: */
+#service-img4 {
+    width: 8vw;
+    cursor: pointer;
+    padding: 1rem 6rem;
+}
+
+/* e. Roof: */
+#service-img5 {
+    width: 16.6vw;
+    cursor: pointer;
+    padding: 1rem 6rem;
+}
+
+/* f. Tiles: */
+#service-img6 {
+    width: 18vw;
+    cursor: pointer;
+    padding: 1rem 2.8rem;
+}
+
+/* g. Windows: */
+#service-img7 {
+    width: 12.4vw;
+    cursor: pointer;
+    padding: 1rem 5rem;
+}
+
+.service-para {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------------------------------------- 4. Section Area: ------------------------------------------------*/
+
+.aboutus-section {
+    height: 150vh;
+    width: 100%;
+}
+
+/* a. AboutUs Head: */
+
+.aboutus-head {
+    background-color: #636e72;
+}
+
+.aboutushead-heading {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.2rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+/* b. AboutUs Slider: */
+
+.aboutus-slider {
+    height: 97vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 0;
+}
+
+.aboutus-slide1 {
+    background: rgba(0, 0, 0, 0) url('../img/Why us/clock.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
+    border-radius: 61px;
+    border: 2px solid black;
+    margin: auto;
+    height: 30vh;
+    width: 75vw;
+    cursor: pointer;
+}
+
+.aboutus-slide1:hover {
+    box-shadow: inset 21px 21px 125px black, inset -21px -21px 125px black;
+}
+.aboutus-slide2:hover {
+    box-shadow: inset 21px 21px 125px black, inset -21px -21px 125px black;
+}
+.aboutus-slide3:hover {
+    box-shadow: inset 21px 21px 125px black, inset -21px -21px 125px black;
+}
+
+.aboutus-slide2 {
+    /* background: rgba(0, 0, 0, 0) url('../img/Why us/sky.jpg') no-repeat center center/cover; */
+    background: rgba(0, 0, 0, 0.4) url('../img/Why us/stars-1.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
+    border: 2px solid black;
+    border-radius: 61px;
+    margin: auto;
+    height: 30vh;
+    width: 75vw;
+    cursor: pointer;
+}
+
+.aboutus-slide3 {
+    background: rgba(0, 0, 0, 0) url('../img/Why us/coins.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
+    border: 2px solid black;
+    border-radius: 61px;
+    margin: auto;
+    height: 30vh;
+    width: 75vw;
+    cursor: pointer;
+}
+
+.aboutus-caption {
+    padding: 5rem 5rem;
+}   
+
+.aboutusbody-heading {
+    font-size: 3.5rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------------------------------------- 5. Footer Area: ------------------------------------------------*/
+
+/* a. Upper Footer: */
+.upper-footer {
+    background-color: #2d3436;
+}
+
+.upperfooter-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 1. Footer Heading: */
+.footer-heading {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 0 0.1rem 0rem;
+    font-size: 2rem;
+}
+
+.footer-heading a {
+    text-decoration: none;
+    color: white;
+}
+
+/* b. Footer Links: */
+.footer-links {
+    padding-bottom: 2rem;
+}
+
+/* c. Footer items: */
+.footer-items {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.footer-items a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* d. Footer Para: */
+.footer-para {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.footer-para a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+/* b. Copyright Footer: */
+.bottom-footer {
+    background-color: #636e72;
+    text-align: center;
+}
+
+.copyright-footer {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1297px) {
+    #nav-bar {
+        flex-direction: column;
+    }
+    .navbar-h {
+        height: 5vh;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .navlinks-vis {
+        opacity: 0;
+    }
+    .right-nav {
+        margin: 3rem 0;        
+    }
+    .rightnav-vis {
+        opacity: 0;
+    }
+    .menu {
+        display: block;
+        top: 1.5rem;
+        right: 2rem;
+    }
+    #hamburger {
+        width: 2.6vw;
+    }
+    /* 2. Banner Area: */
+    .banner-section {
+        height: 50vh;
+    }
+    .banner-slider {
+        height: 50vh;
+    }
+    .caption {
+        height: 50vh;
+        margin: auto auto;
+        width: 80vw;
+    }
+    .caption .banner-heading {
+        padding: 0.2rem;
+        padding-top: 4rem;
+        font-size: 2.6rem;
+    }
+    .caption .banner-heading .banner-para {
+        padding-bottom: 1.4rem;
+    }
+    .caption .banner-heading .banner-para .banner-btn {
+        padding: 0rem 1rem;
+        font-size: 1rem;
+    }
+    /* 3. Services */
+    .service-section {
+        height: auto;
+    }
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 3rem auto;
+    }
+    .service-items {
+        height: 21vh;
+    }
+    /* 4. Aboutus */
+    .aboutus-section {
+        height: auto;
+    }
+    .aboutus-slider {
+        height: 32vh;
+        width: 100vw;
+    }
+    .aboutus-slide1 {
+        width: 56vw;
+        height: 10vh;
+    }
+    .aboutus-slide2 {
+        width: 56vw;
+        height: 10vh;
+    }
+    .aboutus-slide3 {
+        width: 56vw;
+        height: 10vh;
+    }
+    .aboutus-caption {
+        padding: 3rem 2rem;
+    }
+    .aboutusbody-heading {
+        font-size: 2rem;
+    }
+    /* 5. Footer: */
+    .upperfooter-container {
+        height: auto;
+    }
+    .footer-heading {
+        font-size: 1.4rem;
+    }
+    .footer-items a {
+        font-size: 0.9rem;
+    }
+    .footer-para a {
+        font-size: 0.9rem;
+    }
+    .copyright-footer {
+        padding: 0.4rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #nav-logo {
+        width: 4.6vw;
+    }
+    .caption .banner-heading {
+        font-size: 2.2rem;
+    }
+    .caption .banner-para {
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+    }
+    .caption .banner-btn {
+        padding: 0.1rem 1rem;
+    }
+    .service-items {
+        height: 13vh;
+        width: 40%;
+    }
+    .aboutushead-heading {
+        font-size: 2.4rem;
+    }
+    .aboutus-caption {
+        padding: 2.6rem 2rem;
+    }
+    .aboutus-slide1 {
+        width: 60vw;
+        height: 9vh;
+    }
+    .aboutus-slide2 {
+        width: 60vw;
+        height: 9vh;
+    }
+    .aboutus-slide3 {
+        width: 60vw;
+        height: 9vh;
+    }
+    .footer-heading {
+        font-size: 1.2rem;
+    }
+    .footer-items a {
+        font-size: 0.8rem;
+    }
+    .footer-para a {
+        font-size: 0.8rem;
+    }
+    .copyright-footer {
+        font-size: 0.8rem;
+    }
+}
