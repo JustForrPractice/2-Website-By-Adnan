@@ -135,7 +135,7 @@ header {
     top: 0;
     left: 0;
     z-index: -4;
-    /* animation: slide 24s 5s infinite backwards; */
+    animation: slide 24s 5s infinite backwards; 
 }
 
 @keyframes slide {
